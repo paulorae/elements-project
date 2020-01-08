@@ -1,0 +1,38 @@
+{% extends "main/header.html" %}
+
+
+{% block content %}
+    
+    <div class="container">
+
+        <div align="right">
+            <button class="btn" style="background-color:white;color:black" onclick="back()">RETURN</button>
+        &nbsp;&nbsp;
+        </div>
+
+        <div class="row">
+            {% for tut, partone in part_ones.items %}
+                <div class="col s12 m12 l6">
+                    <a href="{{partone}}", style="color:#000">
+                        <div class="card-panel hoverable" style="height:170px; background-color:#FFFFFF;">
+                            <div class="card-content">
+                                <div class="card-title">{{tut.tutorial_series}}</div>
+                                <p>{{tut.series_summary}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h6 align="center">Whether you’re loud or quiet, timid or outgoing, impetuous or logical,  your personality is filled with complexity but it can be difficult to self-evaluate to gain insight into our base emotions and desires. That’s why finding your element can help. As you read over the qualities associated with each of the four elements of nature, you might have your “Aha!” moment, or you might feel as though you don’t relate to certain aspects. This is because every person is an utterly unique combination of elements. By finding your dominant element, you’ll be able to better appreciate your own strengths and weaknesses. This understanding will help you to build better, stronger relationships with those around you. Let your element be a guide to a more intuitive self.</h6>
+
+    </div>
+
+    
+
+<script>
+    function back()
+    {window.history.back()}
+</script>
+{% endblock %}

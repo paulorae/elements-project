@@ -1,0 +1,84 @@
+{% load static %}
+
+<head>
+	  <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style type="text/css">
+
+      html, body{
+      height: 100%;
+      }
+
+      #container {
+      min-height: 100%;
+      margin-bottom: -235px;
+      position: relative;
+      }
+
+      .clearfooter {
+      height: 235px;
+      clear: both;
+      }
+
+      #footer {
+        background-color: #3a3a3d;
+        position: relative;
+        bottom: 0px;
+        height: 150px;
+        left: 0px;
+        right: 0px;
+      }
+
+      .white-text {
+        font-size: 16px;
+        line-height: 120px;
+      }
+
+      #wrapper {
+        padding-bottom: 330px;
+        align-content: center;
+      }
+
+      .topnav-centered a{
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+    </style>
+</head>
+
+
+<body>
+
+    {% include "main/includes/navbar.html" %}
+
+    <div id="wrapper">
+
+      <div class="container">
+        <br>
+        <h3 align="center">P O R T S</h3>
+
+        <br><br>
+        {% block content %}
+        {% endblock %}
+
+        <div class="clearfooter"></div>
+
+      </div>
+
+    </div>
+
+    <div id="footer">
+        <p class="white-text" align="center">Paulo Rae Portades</a></p>
+    </div>
+
+</body>
+
+
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+<script>M.AutoInit();</script>
