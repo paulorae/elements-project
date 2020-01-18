@@ -1,7 +1,7 @@
 Introduction
 -------------
 
-Elements is a Web App using Django Framework - MVC architectural pattern.
+Elements is a Web App using Django Framework - MVC architectural pattern based.
 
 Elements is an archive app using Django that allows you to view the contents different elemental user in a particular element.
 
